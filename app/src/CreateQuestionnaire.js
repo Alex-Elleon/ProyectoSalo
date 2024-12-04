@@ -6,28 +6,26 @@ import axios from "axios";
 export const CreateQuestionnaire = () => {
 
     const [showQuestionnaire, setShowQuestionnaire] = useState(false);
-
+    const defaultQuestion = {
+        title: "Pregunta sin titulo",
+        type: "radio",
+        options: ["Opción 1"],
+        isMandatory: false,
+    }
     const [createQuestionnaire, setCreateQuestionnaire] = useState({
         title: "Cuestionario vacio",
         description: "Descripcion simple",
         questions: [
-            {
-                title: "Pregunta sin titulo",
-                type: "radio",
-                options: ["Opción 1"],
-                isMandatory: false,
-            }
+            defaultQuestion
         ],
         userId:JSON.parse(localStorage.user)._id
     });
-
     const onChangeTitle = (e) => {
         e.preventDefault();
         const data = createQuestionnaire;
         data.title = e.target.value;
         setCreateQuestionnaire({ ...data })
     };
-
     const onChangeBasicFields = (e, index) => {
         const data = createQuestionnaire;
         data.questions[index][e.target.name] = e.target.value;
@@ -38,14 +36,9 @@ export const CreateQuestionnaire = () => {
         data.questions[index].options.push(`Opcion ${data.questions[index].options.length + 1}`)
         setCreateQuestionnaire({ ...data })
     };
-
     const addQuestion = () => {
         const data = createQuestionnaire;
-        data.questions.push({
-            title: "Pregunta sin titulo",
-            type: "radio",
-            options: ["Opción 1"]
-        })
+        data.questions.push(defaultQuestion)
         setCreateQuestionnaire({ ...data })
     };
 
