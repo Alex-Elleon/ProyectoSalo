@@ -13,6 +13,6 @@ async function main() {
         })
     } catch (error) {
         console.log("Algo salio mal con la base de datos")
-    }
+    } 
 }
 main();

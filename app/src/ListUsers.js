@@ -13,7 +13,7 @@ export const ListUsers = () => {
     const getUser = () => {
         //Peticion a DB
         const users = [
-            {
+            {  
                 name: "Juan",
                 lastName: "Solano",
                 email: "juan@edu.mx"

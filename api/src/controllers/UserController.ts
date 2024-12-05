@@ -10,7 +10,7 @@ export const registerUsers = async (req: Request, res: Response): Promise<void> 
         const lastNames = req.body.lastNames
         const password = req.body.password
         const rol = req.body.rol
-
+ 
         //Administradores NO PUEDEN crear clientes
         if (req.user?.rol === "administrator" && rol === "client") {
             res.status(400).json({ msg: "Los administradores no pueden crear clientes" })

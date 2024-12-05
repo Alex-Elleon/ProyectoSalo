@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     path: "/list-q",
     element: <ShowQuestionnaires />,
   },
-  {
+  { 
     path: "/",
     element: <App />,
   },

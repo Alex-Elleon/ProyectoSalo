@@ -28,7 +28,7 @@ export const Dashboard = () => {
                 numberOfQuestionnaires: res.data.numberOfQuestionnaires,
                 numberOfUsers: res.data.numberOfUsers
             }
-            setMetrics(data)
+            setMetrics(data) 
         } catch (error) {
             alert("Hubo un error al obtener las metricas")
         }

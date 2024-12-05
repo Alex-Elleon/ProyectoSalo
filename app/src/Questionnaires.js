@@ -21,7 +21,7 @@ export const Questionnaires = () => {
             "5. ¿Qué papel tiene la biotecnología en la sostenibilidad ambiental?",
             "6. ¿Cómo afecta la contaminación plástica a los ecosistemas marinos?",]
     },
-
+ 
     {
         title: "Historia y Política",
         qs: ["1. ¿Cuáles fueron las principales causas de la Primera Guerra Mundial?",

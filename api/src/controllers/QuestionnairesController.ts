@@ -5,7 +5,7 @@ import { QuestionnaireModel } from "../models/QuestionnairesModel";
 import { OptionModel } from "../models/OptionsModel";
 import { UserModel } from "../models/UsersModel";
 
-
+ 
 export const createQuizz = async (req: Request, res: Response): Promise<void> => {
     try {
         const body = req.body;
